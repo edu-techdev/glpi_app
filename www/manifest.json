@@ -1,0 +1,17 @@
+{
+  "name": "GLPI App",
+  "short_name": "GLPI",
+  "description": "Aplicação para gerenciamento de TI",
+  "start_url": "/glpi_app/www/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#1976d2",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "assets/icon/favicon.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+} 
