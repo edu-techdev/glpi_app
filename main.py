@@ -7,10 +7,20 @@ import uvicorn
 from datetime import datetime
 from dotenv import load_dotenv
 import os
+from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
 app = FastAPI(title="API GLPI Tickets", description="API para consultar tickets do GLPI")
+
+# Adiciona o middleware de CORS
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Permite todas as origens
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # Configurações do banco de dados
 host = os.getenv("DB_HOST")
